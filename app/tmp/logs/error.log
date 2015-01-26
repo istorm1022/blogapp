@@ -1,0 +1,20 @@
+2015-01-26 10:58:01 Error: Fatal Error (4): syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/var/www/application/current/app/Config/database.php, line 67]
+2015-01-26 10:58:01 Error: [FatalErrorException] syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /
+Stack Trace:
+#0 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/applic...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/applic...', 67, Array)
+#2 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/applic...', 67, Array)
+#3 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-01-26 10:58:52 Error: Fatal Error (4): syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in [/var/www/application/current/app/Config/database.php, line 77]
+2015-01-26 10:58:52 Error: [FatalErrorException] syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+Request URL: /
+Stack Trace:
+#0 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/applic...', 77)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/applic...', 77, Array)
+#2 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/applic...', 77, Array)
+#3 /var/www/application/current/app/Vendor/cakephp/cakephp/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
