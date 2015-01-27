@@ -10,4 +10,4 @@ Environment::configure('test', false, [
 ], function() {
     CakePlugin::load('Bdd');
     CakePlugin::load('Fabricate');
-]);
+});
