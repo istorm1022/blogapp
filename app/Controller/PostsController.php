@@ -14,6 +14,10 @@ class PostsController extends AppController {
     ];
 
     public function index() {
+	$this->Paginator->settings = [
+            'limit' => 5,
+            'order' => ['Post.id' => 'desc'],
+        ];
 	$this->set('posts', $this->Paginator->paginate());
     }
 
@@ -22,12 +26,12 @@ class PostsController extends AppController {
 	    $this->Post->create($this->request->data);
 	    if ($this->Post->save()) {
 		$this->Session->setFlash(__('新しい記事を受け付けました。'),
-		'alert', ['plugin => 'BoostCake', 'class' => 'alert-success']);
+		'alert', ['plugin' => 'BoostCake', 'class' => 'alert-success']);
 		return $this->redirect(['action' => 'index']);
 	    } else {
 		$this->Session->
 		setFlash(__('記事の投稿に失敗しました。入力内容を確認して再度投稿してください。'),
-		'alert', ['plugin => 'BoostCake', 'class' => 'alert-danger']);
+		'alert', ['plugin' => 'BoostCake', 'class' => 'alert-danger']);
 	    }
 	}
     }

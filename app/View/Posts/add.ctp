@@ -7,6 +7,6 @@
 ], 'class' => 'well']) ?>
 <?= $this->Form->input('title', ['label'=>'タイトル']) ?>
 <?= $this->Form->input('body', ['label'=>'本文']) ?>
-<?= $this->Form->submit('投稿', ['class'=>btn btn-default'']) ?>
+<?= $this->Form->submit('投稿', ['class'=>'btn btn-default']) ?>
 <?= $this->FOrm->end(); ?>
 </div>
