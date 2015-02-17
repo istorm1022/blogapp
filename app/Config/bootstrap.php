@@ -12,12 +12,10 @@
  * @package       app.Config
  * @since         CakePHP(tm) v 0.10.8.2117
  */
-
+require_once dirname(dirname(__FILE__)) . DS . 'Vendor' . DS . 'autoload.php';
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
-require_once dirname(dirname(__FILE__)) . DS . 'Vendor' . DS . 'autoload.php';
 include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
-
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
@@ -43,7 +41,6 @@ include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
  * ));
  *
  */
-
 /**
  * Custom Inflector rules can be set to correctly pluralize or singularize table, model, controller names or whatever other
  * string is passed to the inflection functions
@@ -52,7 +49,6 @@ include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
  * Inflector::rules('plural', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));
  *
  */
-
 /**
  * Plugins need to be loaded manually, you can either load them one by one or all of them in a single call
  * Uncomment one of the lines below, as you need. Make sure you read the documentation on CakePlugin to use more
@@ -62,12 +58,11 @@ include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-  CakePlugin::load('Migrations');
-  CakePlugin::load('BoostCake');
-  CakePlugin::load('Users');
-  CakePlugin::load('Utils');
-  CakePlugin::load('Search');
-
+CakePlugin::load('Migrations');
+CakePlugin::load('BoostCake');
+CakePlugin::load('Users', array('routes' => null));
+CakePlugin::load('Utils');
+CakePlugin::load('Search');
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter . By default CakePHP bundles two filters:
  *
@@ -88,7 +83,6 @@ Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
 ));
-
 /**
  * Configures default file logging options
  */

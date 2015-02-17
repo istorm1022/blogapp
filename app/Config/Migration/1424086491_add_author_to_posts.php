@@ -17,7 +17,7 @@ class AddAuthorToPosts extends CakeMigration {
 		'up' => array(
 			'create_field' => array(
 				'posts' => array(
-					'author_id' => array('type' => 'string', 'null' => false, 'default' => null, 'key' => 'index', 'length' => 36),
+					'author_id' => array('type' => 'string', 'null' => false, 'default' => null, 'key' => 'index', 'length'=>36),
 					'indexes' => array(
 						'BY_AUTHOR_ID' => array('column' => 'author_id', 'unique' => false),
 					),

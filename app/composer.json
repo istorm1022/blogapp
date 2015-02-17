@@ -21,7 +21,7 @@
         "cakedc/migrations": "~2.3",
         "fzaninotto/faker": "1.4.*",
         "slywalker/boost_cake": "*",
-        "cakedc/users": "2.*",
+        "cakedc/users": "2.1.1",
         "cakedc/utils": "*",
         "cakedc/search": "*"
     },
